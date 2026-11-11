@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal • Ompreng MBG Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <div class="brand">
+        <img src="logo-bgn.png" alt="Logo BGN" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Ompreng MBG <span class="brand-country">Indonesia</span></span>
+          <span class="brand-tag">Sistem Pencatatan Peminjaman &amp; Pengembalian</span>
+        </div>
+      </div>
+      <div class="header-user">
+        <div class="user-avatar" id="user-avatar-text">U</div>
+        <div class="user-info">
+          <span class="user-name" id="display-name">Pengguna MBG</span>
+          <span class="user-role" id="display-role">Akses Terverifikasi</span>
+        </div>
+        <a href="login.html" class="btn-logout" title="Keluar">🚪</a>
+      </div>
+    </header>
+
+    <nav class="app-nav" id="main-nav">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="jadwal.html" class="nav-link active">Jadwal</a>
+      <a href="peminjaman.html" class="nav-link">Peminjaman</a>
+      <a href="pengembalian.html" class="nav-link">Pengembalian</a>
+      <a href="riwayat.html" class="nav-link">Riwayat</a>
+    </nav>
+
+    <main class="app-main">
+      <div class="page-header">
+        <h1>📅 Jadwal Pengambilan Ompreng</h1>
+        <p class="page-desc">Jadwal pembagian ompreng MBG berdasarkan kelas dan jurusan. Lokasi: <strong>Depan Sarpras Lantai 1</strong> (Jam 09:00).</p>
+      </div>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>⏰ Jadwal Harian</h2>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Waktu</th>
+                <th>Kelas</th>
+                <th>Jurusan</th>
+                <th>Lokasi Ambil</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-group-header"><td colspan="5"><strong>Kelas X</strong></td></tr>
+              <tr><td>09:00</td><td>X</td><td>RPL (Rekayasa Perangkat Lunak)</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-kembali">Selesai</span></td></tr>
+              <tr><td>09:00</td><td>X</td><td>DKV (Desain Komunikasi Visual)</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-kembali">Selesai</span></td></tr>
+              <tr><td>09:00</td><td>X</td><td>Kuliner</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-kembali">Selesai</span></td></tr>
+              <tr><td>09:00</td><td>X</td><td>Busana</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-kembali">Selesai</span></td></tr>
+              <tr><td>09:00</td><td>X</td><td>Permesinan</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-kembali">Selesai</span></td></tr>
+              <tr><td>09:00</td><td>X</td><td>Otomotif</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-kembali">Selesai</span></td></tr>
+              <tr><td>09:00</td><td>X</td><td>Kelistrikan</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-kembali">Selesai</span></td></tr>
+
+              <tr class="table-group-header"><td colspan="5"><strong>Kelas XI</strong></td></tr>
+              <tr><td>09:00</td><td>XI</td><td>RPL (Rekayasa Perangkat Lunak)</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-dipinjam">Proses</span></td></tr>
+              <tr><td>09:00</td><td>XI</td><td>DKV (Desain Komunikasi Visual)</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-dipinjam">Proses</span></td></tr>
+              <tr><td>09:00</td><td>XI</td><td>Kuliner</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-dipinjam">Proses</span></td></tr>
+              <tr><td>09:00</td><td>XI</td><td>Busana</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-dipinjam">Proses</span></td></tr>
+              <tr><td>09:00</td><td>XI</td><td>Permesinan</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-dipinjam">Proses</span></td></tr>
+              <tr><td>09:00</td><td>XI</td><td>Otomotif</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-dipinjam">Proses</span></td></tr>
+              <tr><td>09:00</td><td>XI</td><td>Kelistrikan</td><td>Depan Sarpras Lantai 1</td><td><span class="badge badge-dipinjam">Proses</span></td></tr>
+
+              <tr class="table-group-header"><td colspan="5"><strong>Kelas XII</strong></td></tr>
+              <tr><td>09:00</td><td>XII</td><td>RPL (Rekayasa Perangkat Lunak)</td><td>Depan Sarpras Lantai 1</td><td><span class="badge">Menunggu</span></td></tr>
+              <tr><td>09:00</td><td>XII</td><td>DKV (Desain Komunikasi Visual)</td><td>Depan Sarpras Lantai 1</td><td><span class="badge">Menunggu</span></td></tr>
+              <tr><td>09:00</td><td>XII</td><td>Kuliner</td><td>Depan Sarpras Lantai 1</td><td><span class="badge">Menunggu</span></td></tr>
+              <tr><td>09:00</td><td>XII</td><td>Busana</td><td>Depan Sarpras Lantai 1</td><td><span class="badge">Menunggu</span></td></tr>
+              <tr><td>09:00</td><td>XII</td><td>Permesinan</td><td>Depan Sarpras Lantai 1</td><td><span class="badge">Menunggu</span></td></tr>
+              <tr><td>09:00</td><td>XII</td><td>Otomotif</td><td>Depan Sarpras Lantai 1</td><td><span class="badge">Menunggu</span></td></tr>
+              <tr><td>09:00</td><td>XII</td><td>Kelistrikan</td><td>Depan Sarpras Lantai 1</td><td><span class="badge">Menunggu</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>© 2026 <strong>Ompreng MBG Indonesia</strong> • Kelompok 5 • XI RPL 1</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
