@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengembalian • Ompreng MBG Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <div class="brand">
+        <img src="logo-bgn.png" alt="Logo BGN" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Ompreng MBG <span class="brand-country">Indonesia</span></span>
+          <span class="brand-tag">Sistem Pencatatan Peminjaman &amp; Pengembalian</span>
+        </div>
+      </div>
+      <div class="header-user">
+        <div class="user-avatar" id="user-avatar-text">U</div>
+        <div class="user-info">
+          <span class="user-name" id="display-name">Pengguna MBG</span>
+          <span class="user-role" id="display-role">Akses Terverifikasi</span>
+        </div>
+        <a href="login.html" class="btn-logout" title="Keluar">🚪</a>
+      </div>
+    </header>
+
+    <nav class="app-nav" id="main-nav">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="jadwal.html" class="nav-link">Jadwal</a>
+      <a href="peminjaman.html" class="nav-link">Peminjaman</a>
+      <a href="pengembalian.html" class="nav-link active">Pengembalian</a>
+      <a href="riwayat.html" class="nav-link">Riwayat</a>
+    </nav>
+
+    <main class="app-main">
+      <div class="page-header">
+        <h1>↩️ Catat Pengembalian Ompreng</h1>
+        <p class="page-desc">Pilih peminjaman aktif, lalu catat kondisi dan waktu pengembalian.</p>
+      </div>
+
+      <section class="card">
+        <div class="form-group">
+          <label for="pilih-peminjaman">Pilih Peminjaman Aktif <span class="req">*</span></label>
+          <select id="pilih-peminjaman" class="form-control">
+            <option value="">-- Pilih Peminjaman --</option>
+          </select>
+        </div>
+
+        <div id="detail-peminjaman" class="detail-box hidden">
+          <div class="detail-grid">
+            <div><span class="detail-label">Nama Penerima</span><span class="detail-value" id="d-nama">-</span></div>
+            <div><span class="detail-label">Tipe</span><span class="detail-value" id="d-tipe">-</span></div>
+            <div><span class="detail-label">Kelas/Jabatan</span><span class="detail-value" id="d-kelas">-</span></div>
+            <div><span class="detail-label">Jumlah Ompreng</span><span class="detail-value" id="d-jumlah">-</span></div>
+            <div><span class="detail-label">Waktu Pinjam</span><span class="detail-value" id="d-waktu">-</span></div>
+            <div><span class="detail-label">Target Kembali</span><span class="detail-value" id="d-target">-</span></div>
+          </div>
+        </div>
+
+        <form id="form-pengembalian" class="hidden">
+          <div class="form-group">
+            <label for="kondisi">Kondisi Ompreng <span class="req">*</span></label>
+            <select id="kondisi" class="form-control" required>
+              <option value="Baik">Baik</option>
+              <option value="Rusak Ringan">Rusak Ringan</option>
+              <option value="Rusak Berat">Rusak Berat</option>
+              <option value="Hilang">Hilang</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="catatan-kembali">Catatan Pengembalian (opsional)</label>
+            <textarea id="catatan-kembali" class="form-control" rows="3" placeholder="Contoh: 1 ompreng retak..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">✅ Konfirmasi Pengembalian</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>📋 Daftar Peminjaman Aktif</h2>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Penerima</th>
+                <th>Kelas/Jabatan</th>
+                <th>Jumlah</th>
+                <th>Waktu Pinjam</th>
+                <th>Target Kembali</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tabel-pengembalian">
+              <tr><td colspan="6" class="empty-state">Tidak ada peminjaman aktif.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>© 2025 <strong>Ompreng MBG Indonesia</strong> • Kelompok 4 • XI RPL 1</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
