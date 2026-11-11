@@ -3,32 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wireframe: Beranda</title>
+  <title>Beranda • Ompreng MBG Indonesia</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Dikerjakan Pengembang Front-End -->
-  <header class="kotak">Logo • NAMA PRODUK</header>
-  <nav class="kotak"><a href="index.html">Beranda</a> <a href="#">Menu 2</a> <a href="#">Menu 3</a></nav>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <div class="brand">
+        <img src="logo-bgn.png" alt="Logo BGN" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Ompreng MBG <span class="brand-country">Indonesia</span></span>
+          <span class="brand-tag">Sistem Pencatatan Peminjaman &amp; Pengembalian</span>
+        </div>
+      </div>
+      <div class="header-user">
+        <div class="user-avatar" id="user-avatar-text">U</div>
+        <div class="user-info">
+          <span class="user-name" id="display-name">Pengguna MBG</span>
+          <span class="user-role" id="display-role">Akses Terverifikasi</span>
+        </div>
+        <a href="login.html" class="btn-logout" title="Keluar">🚪</a>
+      </div>
+    </header>
 
-  <main>
-    <h1>Beranda</h1>
-    <p class="catatan">Kelompok ... • Wireframe konsep produk TP 11.6 • Dibuat oleh: NAMA</p>
-    <div class="gambar">Gambar utama</div>
-    <div class="teks"></div>
-    <div class="teks pendek"></div>
+    <!-- Semua menu lengkap terbuka untuk semua role -->
+    <nav class="app-nav" id="main-nav">
+      <a href="index.html" class="nav-link active">Beranda</a>
+      <a href="jadwal.html" class="nav-link">Jadwal</a>
+      <a href="peminjaman.html" class="nav-link">Peminjaman</a>
+      <a href="pengembalian.html" class="nav-link">Pengembalian</a>
+      <a href="riwayat.html" class="nav-link">Riwayat</a>
+    </nav>
 
-    <section class="kotak">
-      <h2>Daftar halaman wireframe</h2>
-      <!-- Tambahkan satu baris untuk setiap halaman anggota. Ganti nama file dan nama anggota. -->
-      <ul>
-        <li><a href="nama-file-1.html">Nama halaman 1</a> (nama anggota)</li>
-        <li><a href="nama-file-2.html">Nama halaman 2</a> (nama anggota)</li>
-        <li><a href="nama-file-3.html">Nama halaman 3</a> (nama anggota)</li>
-      </ul>
-    </section>
-  </main>
+    <main class="app-main">
+      <section class="hero">
+        <div class="hero-content">
+          <span class="hero-badge">🇮🇩 Program MBG Indonesia</span>
+          <h1>Selamat Datang! 👋</h1>
+          <p class="hero-desc">
+            Catat peminjaman &amp; pengembalian ompreng MBG dengan mudah, rapi, dan terdata.
+            Tidak perlu lagi tulis manual di buku.
+          </p>
+          <div class="hero-actions">
+            <a href="peminjaman.html" class="btn btn-primary">➕ Catat Peminjaman</a>
+            <a href="pengembalian.html" class="btn btn-secondary">↩️ Catat Pengembalian</a>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">🥡</div>
+      </section>
 
-  <footer class="kotak">Footer • Kelompok ... • XI RPL 1</footer>
+      <section class="card">
+        <div class="card-header">
+          <h2>ℹ️ Informasi Pengambilan Ompreng</h2>
+        </div>
+        <div class="detail-box" style="margin: 0; background: #fff8e6; border-color: #f5d78e;">
+          <div class="detail-grid">
+            <div>
+              <span class="detail-label">Lokasi Pengambilan</span>
+              <span class="detail-value" style="color: #a25e1a;">📍 Depan Sarpras Lantai 1</span>
+            </div>
+            <div>
+              <span class="detail-label">Jam Pengambilan</span>
+              <span class="detail-value" style="color: #a25e1a;">⏰ 09:00 WIB</span>
+            </div>
+            <div>
+              <span class="detail-label">Catatan</span>
+              <span class="detail-value" style="color: #a25e1a;">Silakan menuju lokasi sesuai jadwal kelas Anda.</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-actions" style="margin-top: 16px;">
+          <a href="jadwal.html" class="btn btn-primary">📅 Lihat Jadwal Kelas Saya</a>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-blue">📦</div>
+          <div class="stat-body">
+            <span class="stat-value" id="stat-total">0</span>
+            <span class="stat-label">Total Ompreng</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-orange">📤</div>
+          <div class="stat-body">
+            <span class="stat-value" id="stat-dipinjam">0</span>
+            <span class="stat-label">Sedang Dipinjam</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-green">✅</div>
+          <div class="stat-body">
+            <span class="stat-value" id="stat-tersedia">0</span>
+            <span class="stat-label">Tersedia di Dapur</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-purple">📋</div>
+          <div class="stat-body">
+            <span class="stat-value" id="stat-transaksi">0</span>
+            <span class="stat-label">Total Transaksi</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>⏳ Ompreng Belum Kembali</h2>
+          <a href="riwayat.html" class="link-view-all">Lihat Semua →</a>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Nama Penerima</th>
+                <th>Kelas/Jabatan</th>
+                <th>Jumlah</th>
+                <th>Waktu Pinjam</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tabel-peminjaman-aktif">
+              <tr><td colspan="5" class="empty-state">Belum ada peminjaman aktif.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>⚡ Menu Cepat</h2>
+        </div>
+        <div class="quick-menu">
+          <a href="peminjaman.html" class="quick-item">
+            <div class="quick-icon">📝</div>
+            <div class="quick-label">Catat Peminjaman</div>
+          </a>
+          <a href="pengembalian.html" class="quick-item">
+            <div class="quick-icon">🔄</div>
+            <div class="quick-label">Catat Pengembalian</div>
+          </a>
+          <a href="riwayat.html" class="quick-item">
+            <div class="quick-icon">📊</div>
+            <div class="quick-label">Lihat Laporan</div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>© 2025 <strong>Ompreng MBG Indonesia</strong> • Kelompok 4 • XI RPL 1</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
 </body>
 </html>
