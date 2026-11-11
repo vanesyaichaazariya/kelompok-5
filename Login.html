@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk • Ompreng MBG Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <div class="login-header">
+      <img src="logo-bgn.png" alt="Logo Badan Gizi Nasional" class="login-logo">
+      <h1>Ompreng MBG Indonesia</h1>
+      <p>Sistem Pencatatan Peminjaman & Pengembalian</p>
+    </div>
+
+    <div class="login-roles">
+      <h2>Pilih Akses Anda</h2>
+      <p class="login-desc">Silakan pilih peran Anda untuk masuk ke sistem.</p>
+
+      <div class="role-grid">
+        <a href="index.html" class="role-card" onclick="setRole('Guru')">
+          <div class="role-icon">👨‍🏫</div>
+          <div class="role-name">Guru</div>
+        </a>
+        <a href="index.html" class="role-card" onclick="setRole('Murid')">
+          <div class="role-icon">🎓</div>
+          <div class="role-name">Murid</div>
+        </a>
+        <a href="index.html" class="role-card" onclick="setRole('Karyawan')">
+          <div class="role-icon">👔</div>
+          <div class="role-name">Karyawan</div>
+        </a>
+      </div>
+    </div>
+
+    <footer class="login-footer">
+      <p>© 2025 Ompreng MBG Indonesia • Kelompok 4 • XI RPL 1</p>
+    </footer>
+  </div>
+
+  <script>
+    function setRole(role) {
+      localStorage.setItem('user_role', role);
+    }
+  </script>
+</body>
+</html>
