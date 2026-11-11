@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat • Ompreng MBG Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <div class="brand">
+        <img src="logo-bgn.png" alt="Logo BGN" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Ompreng MBG <span class="brand-country">Indonesia</span></span>
+          <span class="brand-tag">Sistem Pencatatan Peminjaman &amp; Pengembalian</span>
+        </div>
+      </div>
+      <div class="header-user">
+        <div class="user-avatar" id="user-avatar-text">U</div>
+        <div class="user-info">
+          <span class="user-name" id="display-name">Pengguna MBG</span>
+          <span class="user-role" id="display-role">Akses Terverifikasi</span>
+        </div>
+        <a href="login.html" class="btn-logout" title="Keluar">🚪</a>
+      </div>
+    </header>
+
+    <nav class="app-nav" id="main-nav">
+      <a href="index.html" class="nav-link">Beranda</a>
+      <a href="jadwal.html" class="nav-link">Jadwal</a>
+      <a href="peminjaman.html" class="nav-link">Peminjaman</a>
+      <a href="pengembalian.html" class="nav-link">Pengembalian</a>
+      <a href="riwayat.html" class="nav-link active">Riwayat</a>
+    </nav>
+
+    <main class="app-main">
+      <div class="page-header">
+        <h1>📊 Riwayat &amp; Laporan</h1>
+        <p class="page-desc">Semua data peminjaman dan pengembalian ompreng MBG tercatat di sini.</p>
+      </div>
+
+      <section class="card">
+        <div class="filter-bar">
+          <div class="form-group">
+            <label for="filter-status">Filter Status</label>
+            <select id="filter-status" class="form-control">
+              <option value="all">Semua</option>
+              <option value="Dipinjam">Dipinjam</option>
+              <option value="Dikembalikan">Dikembalikan</option>
+              <option value="Terlambat">Terlambat</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="filter-cari">Cari Nama</label>
+            <input type="text" id="filter-cari" class="form-control" placeholder="Cari nama penerima...">
+          </div>
+          <button id="btn-reset-filter" class="btn btn-ghost">Reset Filter</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>📋 Daftar Transaksi</h2>
+          <button id="btn-hapus-semua" class="btn btn-danger btn-sm">🗑️ Hapus Semua</button>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Penerima</th>
+                <th>Tipe</th>
+                <th>Kelas/Jabatan</th>
+                <th>Jumlah</th>
+                <th>Waktu Pinjam</th>
+                <th>Target Kembali</th>
+                <th>Waktu Kembali</th>
+                <th>Kondisi</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tabel-riwayat">
+              <tr><td colspan="10" class="empty-state">Belum ada transaksi.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>© 2025 <strong>Ompreng MBG Indonesia</strong> • Kelompok 4 • XI RPL 1</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
